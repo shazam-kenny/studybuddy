@@ -1,0 +1,257 @@
+/* --- 1. THE JOVIAL BACKGROUND --- */
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Modern, rounder font */
+    /* A fun, colorful gradient background */
+    background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- 2. THE BIG LOGIN BOX --- */
+.auth-container {
+    background: #ffffff;
+    padding: 50px; /* Massive padding for "breathability" */
+    border-radius: 20px; /* Very round corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Floating 3D effect */
+    width: 450px; /* Much wider than before */
+    text-align: center;
+    border-top: 10px solid #a18cd1; /* Colorful accent on top */
+}
+
+/* Make the heading Huge and Colorful */
+h2 {
+    color: #444;
+    font-size: 2.5rem; /* Very big text */
+    margin-bottom: 30px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(#a18cd1, #fbc2eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- 3. THE "STRAIGHT LINE" COLORED INPUTS --- */
+form {
+    display: flex;
+    flex-direction: column; /* Forces straight vertical line */
+    gap: 20px; /* Space between boxes */
+}
+
+input, select {
+    width: 100%;
+    padding: 18px; /* Big height */
+    font-size: 1.1rem; /* Big text inside */
+    border: 2px solid #e0e0e0;
+    background-color: #f9f9ff; /* Light bluish tint, not boring white */
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    color: #555;
+}
+
+/* When you click a box, it lights up */
+input:focus, select:focus {
+    outline: none;
+    border-color: #a18cd1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(161, 140, 209, 0.3);
+}
+
+/* --- 4. THE BIG STRESS-FREE BUTTON --- */
+button {
+    width: 100%;
+    padding: 18px; /* Big click area */
+    margin-top: 10px;
+    /* Fun Gradient Color for Button */
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    font-size: 1.3rem; /* Big readable text */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(161, 140, 209, 0.4);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.03); /* Grows slightly when you hover */
+    background: linear-gradient(to right, #927cc2, #eaaad8);
+}
+
+/* --- 5. LINKS --- */
+a {
+    color: #a18cd1;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- 6. DASHBOARD SPECIFIC STYLES --- */
+.dashboard-body {
+    display: block;
+    background: #f4f7f6; /* Softer background for dashboard */
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px dashed #e0e0e0; /* Fun dashed line */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Colorful Badges */
+.badge-admin {
+    background-color: #a18cd1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.badge-student {
+    background-color: #84fab0;
+    color: #055726;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Table Styling */
+table { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+th { color: #888; text-transform: uppercase; letter-spacing: 1px; padding: 15px; }
+td { background: #fff; padding: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+tr:hover td { background-color: #fcfcfc; transform: scale(1.01); transition: 0.2s; }
+
+/* --- PROGRESS BAR --- */
+.progress-container {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    margin: 20px 0;
+    height: 25px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #84fab0, #8fd3f4); /* Green/Blue Gradient */
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 25px; /* Centers text vertically */
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- PRIORITY BADGES --- */
+.priority-high {
+    background-color: #ff6b6b; /* Red */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+.priority-medium {
+    background-color: #feca57; /* Orange/Yellow */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+.priority-low {
+    background-color: #54a0ff; /* Blue */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+/* --- COUNTDOWN TEXT --- */
+.overdue { color: #ff0000; font-weight: bold; }
+.soon { color: #ff9f43; font-weight: bold; }
+.safe { color: #1dd1a1; }
+
+/* --- NOTIFICATION POPUP (Toast) --- */
+.notification-toast {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #ff4757; /* Bright Red/Pink */
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.notification-toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+/* --- FILE DOWNLOAD SECTION --- */
+.file-card {
+    background: #f1f2f6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #a18cd1;
+}
+
+.download-btn {
+    background: #2ed573;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Animation Keyframes */
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+/* Add this to the bottom of style.css */
+.error-msg {
+    background-color: #ffe6e6;
+    color: #d63031;
+    border: 1px solid #ff7675;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
